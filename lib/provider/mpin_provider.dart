@@ -15,7 +15,9 @@ class MpinProvider with ChangeNotifier{
   }
 
   void decrementCounter(){
-    _count = _count - 1;
+    if(_count >= 1){
+      _count = _count - 1;
+    }
     notifyListeners();
   }
 }
